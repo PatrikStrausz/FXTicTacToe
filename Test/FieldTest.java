@@ -26,6 +26,12 @@ class FieldTest {
         assertTrue(field.isWinner());
         field.getArr()[1][1].setValue(true);
         assertFalse(field.isWinner());
+        for (int i = 0; i <field.getArr().length ; i++) {
+            for (int j = 0; j <field.getArr().length ; j++) {
+                field.getArr()[i][j].setValue(true);
+            }
+        }
+        assertTrue(field.isWinner());
 
 
     }
