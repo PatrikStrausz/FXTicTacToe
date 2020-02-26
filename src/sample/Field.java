@@ -5,10 +5,19 @@ import java.util.Random;
 
 public class Field {
 
+
     private Tile[][] arr;
 
     public Field() {
         initField();
+    }
+
+    public Tile[][] getArr() {
+        return arr;
+    }
+
+    public void setArr(Tile[][] arr) {
+        this.arr = arr;
     }
 
     private void initField() {
