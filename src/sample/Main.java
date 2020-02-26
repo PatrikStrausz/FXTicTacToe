@@ -21,6 +21,18 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+
+
+        Field field = new Field();
+
+//        field.print();
+//        field.toggleTiles(13);
+//        field.print();
+        field.shuffle();
+        field.print();
+        field.toggleTiles(5);
+        field.print();
+
+//        launch(args);
     }
 }
