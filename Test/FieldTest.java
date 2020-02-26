@@ -32,7 +32,8 @@ class FieldTest {
             }
         }
         assertTrue(field.isWinner());
-
+        field.getArr()[3][2].setValue(false);
+        assertFalse(field.isWinner());
 
     }
 }
