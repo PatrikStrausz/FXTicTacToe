@@ -12,10 +12,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-        Scene scene = new Scene(root,600, 300);
+        Scene scene = new Scene(root,550, 350);
 
         primaryStage.setScene(scene);
-        root.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
+
         primaryStage.show();
     }
 
@@ -23,16 +23,16 @@ public class Main extends Application {
     public static void main(String[] args) {
 
 
-        Field field = new Field();
-
+//        Field field = new Field();
+//
+////        field.print();
+////        field.toggleTiles(13);
+////        field.print();
+//        field.shuffle();
 //        field.print();
-//        field.toggleTiles(13);
+//        field.toggleTiles(5);
 //        field.print();
-        field.shuffle();
-        field.print();
-        field.toggleTiles(5);
-        field.print();
 
-//        launch(args);
+        launch(args);
     }
 }

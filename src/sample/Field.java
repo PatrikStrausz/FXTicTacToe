@@ -22,8 +22,8 @@ public class Field {
 
     private void initField() {
         arr = new Tile[4][4];
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+        for (int j = 0; j < arr.length; j++) {
+            for (int i = 0; i< arr.length; i++) {
                 arr[i][j] = new Tile();
 
             }
@@ -45,6 +45,7 @@ public class Field {
         }
 
         if (count == 16 || count == 0) {
+            System.out.println("You have won!");
             return true;
         }
 
