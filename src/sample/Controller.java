@@ -62,7 +62,7 @@ public class Controller {
         int intId = Integer.parseInt(id);
 
         game.nextMove(intId);
-        if(game.getField()!=null) {
+        if (game.getField() != null) {
             rePaint();
         }
 
@@ -104,32 +104,39 @@ public class Controller {
 
     public void clickExitGame(ActionEvent event) {
         game.end();
-        Stage stage = (Stage)btnExitGame.getScene().getWindow();
+        Stage stage = (Stage) btnExitGame.getScene().getWindow();
         stage.close();
 
     }
 
-    public void rePaint(){
+    public void rePaint() {
         Tile[][] arr = game.getField().getArr();
-        btn0.setText(arr[0][0].isValue()?"X":"O");
-        btn4.setText(arr[0][1].isValue()?"X":"O");
-        btn8.setText(arr[0][2].isValue()?"X":"O");
-        btn12.setText(arr[0][3].isValue()?"X":"O");
+        btn0.setText(arr[0][0].isValue() ? "X" : "O");
+        btn4.setText(arr[0][1].isValue() ? "X" : "O");
+        btn8.setText(arr[0][2].isValue() ? "X" : "O");
+        btn12.setText(arr[0][3].isValue() ? "X" : "O");
 
-        btn1.setText(arr[1][0].isValue()?"X":"O");
-        btn5.setText(arr[1][1].isValue()?"X":"O");
-        btn9.setText(arr[1][2].isValue()?"X":"O");
-        btn13.setText(arr[1][3].isValue()?"X":"O");
+        btn1.setText(arr[1][0].isValue() ? "X" : "O");
+        btn5.setText(arr[1][1].isValue() ? "X" : "O");
+        btn9.setText(arr[1][2].isValue() ? "X" : "O");
+        btn13.setText(arr[1][3].isValue() ? "X" : "O");
 
-        btn2.setText(arr[2][0].isValue()?"X":"O");
-        btn6.setText(arr[2][1].isValue()?"X":"O");
-        btn10.setText(arr[2][2].isValue()?"X":"O");
-        btn14.setText(arr[2][3].isValue()?"X":"O");
+        btn2.setText(arr[2][0].isValue() ? "X" : "O");
+        btn6.setText(arr[2][1].isValue() ? "X" : "O");
+        btn10.setText(arr[2][2].isValue() ? "X" : "O");
+        btn14.setText(arr[2][3].isValue() ? "X" : "O");
 
-        btn3.setText(arr[3][0].isValue()?"X":"O");
-        btn7.setText(arr[3][1].isValue()?"X":"O");
-        btn11.setText(arr[3][2].isValue()?"X":"O");
-        btn15.setText(arr[3][3].isValue()?"X":"O");
+        btn3.setText(arr[3][0].isValue() ? "X" : "O");
+        btn7.setText(arr[3][1].isValue() ? "X" : "O");
+        btn11.setText(arr[3][2].isValue() ? "X" : "O");
+        btn15.setText(arr[3][3].isValue() ? "X" : "O");
+
+        changeBackgroundColor();
+
+    }
+
+    public void changeBackgroundColor() {
+        Tile[][] arr = game.getField().getArr();
 
         if (arr[0][0].isValue()) {
             btn0.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -213,8 +220,6 @@ public class Controller {
         } else {
             btn15.setBackground(new Background(new BackgroundFill(Color.DEEPSKYBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
         }
-
-
     }
 
 
